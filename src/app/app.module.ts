@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MyComponentComponent } from './my-component.component';
+import { BlueColorDirective } from './blue-color.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyComponentComponent
+    MyComponentComponent,
+    BlueColorDirective
   ],
   imports: [
     BrowserModule
