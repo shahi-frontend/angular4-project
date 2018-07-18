@@ -8,7 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
   childText = '';
+  visible = true;
   onClicked(value: string) {
     this.childText = value;
+  }
+
+  toggleDiv() {
+    this.visible = !this.visible;
   }
 }

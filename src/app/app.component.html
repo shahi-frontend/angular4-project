@@ -4,3 +4,9 @@
 <p blueColored>This is Custom Directive</p>
 <app-my-component (clicked)="onClicked($event)"></app-my-component>
 <p>{{ childText }}</p>
+
+<div *ngIf="visible;then evenClicked else oddClicked">This works!</div>
+<button type="button" (click)="toggleDiv()">Toggle</button>
+
+<ng-template #oddClicked>This is odd Content.</ng-template>
+<ng-template #evenClicked>This is even Content.</ng-template>
