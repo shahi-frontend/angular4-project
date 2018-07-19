@@ -12,6 +12,7 @@ export class AppComponent {
   counter = 0;
   result = 4;
   finalResult = '';
+  username = 'shahi-frontend';
   myFavLang = {
     'frontend' : ['html', 'css', 'javascript'],
     'backend' : ['nodejs', 'ruby', 'python']

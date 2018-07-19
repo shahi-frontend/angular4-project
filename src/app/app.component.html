@@ -18,3 +18,7 @@
 <!--One way data-binding-->
 <input type="text" (keydown)="myFunction($event)" value="{{result}}" />
 {{finalResult}}
+
+<!--Two way data-binding-->
+<input type="text" [(ngModel)]="username" /><br />
+{{username}}
