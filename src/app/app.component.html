@@ -8,6 +8,8 @@
 <!-- <div *ngIf="visible;then evenClicked else oddClicked">This works!</div> -->
 <div *ngIf="myFavLang.frontend; let frontEndLanguages">Yep! {{ frontEndLanguages.join(',') }}</div>
 <button type="button" (click)="toggleDiv()">Toggle</button>
-
+<ul *ngFor="let language of myLang; let i = index; let even = even">
+  <li *ngIf="even">{{i}} {{ language.name }}, {{ language.type }}</li>
+</ul> 
 <!-- <ng-template #oddClicked>This is odd Content.</ng-template>
 <ng-template #evenClicked>This is even Content.</ng-template> -->

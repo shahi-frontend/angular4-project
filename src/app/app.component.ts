@@ -14,6 +14,12 @@ export class AppComponent {
     'frontend' : ['html', 'css', 'javascript'],
     'backend' : ['nodejs', 'ruby', 'python']
   };
+  myLang = [
+    {'name': 'html', 'type': 'frontend'},
+    {'name': 'css', 'type': 'frontend'},
+    {'name': 'js', 'type': 'frontend'},
+    {'name': 'ruby', 'type': 'backend'},
+  ];
   onClicked(value: string) {
     this.childText = value;
   }
