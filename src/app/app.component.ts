@@ -10,6 +10,8 @@ export class AppComponent {
   childText = '';
   visible = true;
   counter = 0;
+  result = 4;
+  finalResult = '';
   myFavLang = {
     'frontend' : ['html', 'css', 'javascript'],
     'backend' : ['nodejs', 'ruby', 'python']
@@ -27,5 +29,9 @@ export class AppComponent {
   toggleDiv() {
     this.counter++;
     // this.visible = !this.visible;
+  }
+
+  myFunction(event) {
+    this.finalResult = event.target.value;
   }
 }

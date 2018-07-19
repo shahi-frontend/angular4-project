@@ -13,3 +13,8 @@
 </ul> 
 <!-- <ng-template #oddClicked>This is odd Content.</ng-template>
 <ng-template #evenClicked>This is even Content.</ng-template> -->
+
+
+<!--One way data-binding-->
+<input type="text" (keydown)="myFunction($event)" value="{{result}}" />
+{{finalResult}}
