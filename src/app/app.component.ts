@@ -9,11 +9,17 @@ export class AppComponent {
   title = 'app';
   childText = '';
   visible = true;
+  counter = 0;
+  myFavLang = {
+    'frontend' : ['html', 'css', 'javascript'],
+    'backend' : ['nodejs', 'ruby', 'python']
+  };
   onClicked(value: string) {
     this.childText = value;
   }
 
   toggleDiv() {
-    this.visible = !this.visible;
+    this.counter++;
+    // this.visible = !this.visible;
   }
 }

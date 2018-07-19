@@ -5,8 +5,9 @@
 <app-my-component (clicked)="onClicked($event)"></app-my-component>
 <p>{{ childText }}</p>
 
-<div *ngIf="visible;then evenClicked else oddClicked">This works!</div>
+<!-- <div *ngIf="visible;then evenClicked else oddClicked">This works!</div> -->
+<div *ngIf="myFavLang.frontend; let frontEndLanguages">Yep! {{ frontEndLanguages.join(',') }}</div>
 <button type="button" (click)="toggleDiv()">Toggle</button>
 
-<ng-template #oddClicked>This is odd Content.</ng-template>
-<ng-template #evenClicked>This is even Content.</ng-template>
+<!-- <ng-template #oddClicked>This is odd Content.</ng-template>
+<ng-template #evenClicked>This is even Content.</ng-template> -->

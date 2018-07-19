@@ -7,7 +7,7 @@ export class BlueColorDirective {
 
   constructor(element: ElementRef) {
     element.nativeElement.style.color = 'blue';
-   }
+  }
 
   //  @HostListener('click') doSomething() {
   //    console.log('DOM element is clicked');
