@@ -1,24 +1,27 @@
-<h1>
+<!-- <h1>
   Welcome to {{ title }}!
-</h1>
-<p blueColored>This is Custom Directive</p>
+</h1> -->
+<h2>Router View:</h2>
+<router-outlet></router-outlet>
+<!-- <p blueColored>This is Custom Directive</p>
 <app-my-component (clicked)="onClicked($event)"></app-my-component>
 <p>{{ childText }}</p>
 
 <!-- <div *ngIf="visible;then evenClicked else oddClicked">This works!</div> -->
-<div *ngIf="myFavLang.frontend; let frontEndLanguages">Yep! {{ frontEndLanguages.join(',') }}</div>
+<!-- <div *ngIf="myFavLang.frontend; let frontEndLanguages">Yep! {{ frontEndLanguages.join(',') }}</div>
 <button type="button" (click)="toggleDiv()">Toggle</button>
 <ul *ngFor="let language of myLang; let i = index; let even = even">
   <li *ngIf="even">{{i}} {{ language.name }}, {{ language.type }}</li>
-</ul> 
+</ul>  -->
 <!-- <ng-template #oddClicked>This is odd Content.</ng-template>
 <ng-template #evenClicked>This is even Content.</ng-template> -->
 
 
 <!--One way data-binding-->
-<input type="text" (keydown)="myFunction($event)" value="{{result}}" />
-{{finalResult}}
+<!-- <input type="text" (keydown)="myFunction($event)" value="{{result}}" />
+{{finalResult}} -->
 
 <!--Two way data-binding-->
-<input type="text" [(ngModel)]="username" /><br />
-{{username}}
+<!-- <input type="text" [(ngModel)]="username" /><br />
+{{username}}  -->
+
