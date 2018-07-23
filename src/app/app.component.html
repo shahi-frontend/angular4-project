@@ -25,3 +25,15 @@
 <!-- <input type="text" [(ngModel)]="username" /><br />
 {{username}}  -->
 
+
+<!--Http Example-->
+<input type="text" (keyup)="onNameKeyUp($event)" />
+<button (click)="getProfile()">Get Profile</button>
+{{ firstName }}
+<br />
+<div *ngIf="found">
+  <span>{{firstName}}'s age is {{age}}</span>
+</div>
+<br/>
+<button (click)="postProfile()">Post Profile</button>
+

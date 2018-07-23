@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,9 @@ export class AppComponent {
   counter = 0;
   result = 4;
   finalResult = '';
+  firstName = '';
+  age: number;
+  found: boolean;
   username = 'shahi-frontend';
   myFavLang = {
     'frontend' : ['html', 'css', 'javascript'],
@@ -23,6 +27,10 @@ export class AppComponent {
     {'name': 'js', 'type': 'frontend'},
     {'name': 'ruby', 'type': 'backend'},
   ];
+
+  constructor(private httpClient: HttpClient) {
+
+  }
   onClicked(value: string) {
     this.childText = value;
   }
@@ -34,5 +42,35 @@ export class AppComponent {
 
   myFunction(event) {
     this.finalResult = event.target.value;
+  }
+
+  onNameKeyUp(event) {
+    this.firstName = event.target.value;
+    this.found = false;
+  }
+
+  getProfile() {
+    this.httpClient.get(`https://my-json-server.typicode.com/shahi-frontend/json-server/users/?firstName=${this.firstName}`)
+    .subscribe(
+      (data: any[]) => {
+        if (data.length) {
+          this.age = data[0].age;
+          this.found = true;
+        }
+      }
+    );
+  }
+
+  postProfile() {
+    this.httpClient.post(`https://my-json-server.typicode.com/shahi-frontend/json-server/users/`, 
+    {
+      name: 'Mike Ross',
+      age: 30
+    })
+    .subscribe(
+      (data) => {
+        console.log(data);
+      }
+    );
   }
 }
